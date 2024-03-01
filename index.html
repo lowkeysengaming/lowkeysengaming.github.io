@@ -13,15 +13,18 @@
     <link rel="shortcut icon" href="cran.ico" type="image/x-icon">
     <link rel=" stylesheet" href="css/Layout.css">
     <link rel="stylesheet" href="css/MainPage.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/menu.js"></script>
 
 
 
+
 </head>
 
 <body>
+
 
     <div id="wrap">
 
@@ -124,6 +127,15 @@
                     </h3><br><br>
                     <ul>
                         <li style="height:12px;padding-bottom:8px">
+                            <a href="/post8.html" title="" style="height:12px;padding:3px 0 0px 13px;">
+                                [News]  Promotion: Feb 1 PM 6:01 to Feb 29 PM 6:00
+                            </a>
+                            <span class="date" style="padding-top:0px;height:12px;">24-03-01</span>
+                        </li>
+                    </ul>
+
+                    <ul>
+                        <li style="height:12px;padding-bottom:8px">
                             <a href="/post7.html" title="" style="height:12px;padding:3px 0 0px 13px;">
                                 BENO EVENT
                             </a>
@@ -195,12 +207,12 @@
                         <a href="ss.html"><img src="images/btn_more.gif" width="39" height="10" alt="more"></a>
                     </h3>
                     <div class="bx_shot">
-                        <span id="ssthmb_01"><img src="images/bx_scshot_02.gif" class="png24" width="134"
-                                height="88"></span>
-                        <span id="ssthmb_02"><img src="images/bx_scshot_03.gif" class="png24" width="134"
-                                height="88"></span>
-                        <span id="ssthmb_03"><img src="images/bx_scshot_01.gif" class="png24" width="134"
-                                height="88"></span>
+                        <span id="ssthmb_01"><a href="ss.html"> <img src="images/bx_scshot_01.gif" class="png24"
+                                    width="130" height="88"></a></span>
+                        <span id="ssthmb_02"><a href="ss.html"> <img src="images/bx_scshot_02.gif" class="png24"
+                                    width="130" height="88"></a></span>
+                        <span id="ssthmb_03"><a href="ss.html"> <img src="images/bx_scshot_03.gif" class="png24"
+                                    width="130" height="88"></a></span>
                     </div>
 
                 </div>
@@ -301,29 +313,63 @@
             <div class="clear">
             </div>
         </div>
-        <div id="footer">
-            Copyright (C) 2023 BabyRan_Yong Online Inc. All Right Reserved.
-        </div>
-    </div>
 
+
+
+        
+        
+
+        <div id="footer">
+            <iframe src="footer.html" style="width: 500px;"></iframe>
+            <div id="audio-container">
+                <style>
+                    .fixed-bottom-left {
+                        position: fixed;
+                        bottom: 0;
+                        left: 0;
+                        width: 3003px; /* Adjust as necessary */
+                        height: 200px; /* Adjust as necessary */
+                        border: none; /* Optional: removes the default border */
+                    }
+                </style>
+                  <iframe src="lowkeyplayer.html" class="fixed-bottom-left"></iframe>
+            </div>
+        </div>
+
+    </div>
+<div id="audio-container">
+            <style>
+                .fixed-bottom-left {
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
+                    width: 3003px; /* Adjust as necessary */
+                    height: 200px; /* Adjust as necessary */
+                    border: none; /* Optional: removes the default border */
+                }
+            </style>
+              <iframe src="lowkeyplayer.html" class="fixed-bottom-left"></iframe>
+        </div>
 
     <!-- Messenger Chat Plugin Code -->
     <div id="fb-root"></div>
 
-    <div id="fb-customer-chat" class="fb-customerchat"></div>
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
 
     <script>
         var chatbox = document.getElementById('fb-customer-chat');
-        chatbox.setAttribute("1307377605", "101241096284447");
+        chatbox.setAttribute("page_id", "104058028899328");
         chatbox.setAttribute("attribution", "biz_inbox");
     </script>
 
-
+    <!-- Your SDK code -->
     <script>
         window.fbAsyncInit = function () {
             FB.init({
                 xfbml: true,
-                version: 'API-VERSION'
+                version: 'v13.0'
             });
         };
 
@@ -335,7 +381,6 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
     </script>
-    <!-- Your SDK code -->
 
 
 
