@@ -1,0 +1,41 @@
+
+    <!-- start audio-->
+ <div class="audio-container">
+    <audio id="myAudio" controls autoplay></audio>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var myAudio = document.getElementById('myAudio'); // Ensure this ID matches your <audio> element
+        myAudio.volume = 0.1; // Sets the initial volume to 10%
+
+        // Define your playlist as an array of audio file paths
+        var playlist = ['/audio/1.ogg', '/audio/2.ogg', '/audio/bbry.mp3'];
+        var currentTrack = 0; // Start with the first track in the playlist
+
+        // Load and play a specific track from the playlist
+        function loadTrack(trackIndex) {
+            if (playlist[trackIndex]) { // Check if the track exists in the playlist
+                myAudio.src = playlist[trackIndex];
+                myAudio.play().catch(function (e) {
+                    console.error("Playback failed. Error: ", e);
+                    // Handle browsers that block autoplay without user interaction (e.g., by showing a play button)
+                });
+            } else {
+                console.error("Track index out of bounds: ", trackIndex);
+            }
+        }
+
+        // Initially load the first track
+        loadTrack(currentTrack);
+
+        // When the current track ends, move to the next one
+        myAudio.addEventListener('ended', function () {
+            currentTrack++;
+            if (currentTrack >= playlist.length) {
+                currentTrack = 0; // Loop back to the first track or stop by not calling loadTrack()
+            }
+            loadTrack(currentTrack);
+        });
+    });
+</script>
+<!-- end audio-->
